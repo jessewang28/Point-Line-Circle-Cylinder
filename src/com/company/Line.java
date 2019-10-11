@@ -21,28 +21,28 @@ public class Line {
 
     public double distance()     //You may find Math.pow(base, power) and Math.sqrt(num) useful
     {
-        double dist = Math.sqrt((Math.pow(end1.getX()-end2.getX(), 2) + Math.pow(end1.getY()-end2.getY(), 2) ));
+        double dist = Math.sqrt((Math.pow(end1.getX()-end2.getX(), 2) + Math.pow(end1.getY()-end2.getY(), 2) ));    //distance formula
         return dist;
     }
     public Point midpoint()
     {
-        double midx = 0.5*(end1.getX()-end2.getX());
-        double midy = 0.5*(end1.getY()-end2.getY());
+        double midx = 0.5*(end1.getX()-end2.getX());        //averages the x values of 2 lines
+        double midy = 0.5*(end1.getY()-end2.getY());        //averages the y values of 2 lines
         p1 = new Point(midx, midy);
         return p1;
     }
 
     public boolean sameLength(Line otherLine)
     {
-        double d1 = distance();
-
-        (return Math.abs(d1-d2) <= .001)
+        double d1 = this.distance();            //distance of line 1
+        double d2 = otherLine.distance();       //distance of line 2
+        return Math.abs(d1-d2) <= .001;
     }
 
     public double slope()
     {
         double m;
-        m = (end2.getY()-end1.getY())/(end2.getX()-end1.getX());
+        m = (end2.getY()-end1.getY())/(end2.getX()-end1.getX());    //slope of a line
         return m;
 
     }
