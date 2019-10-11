@@ -16,11 +16,13 @@ public class Circle {
 
     public double Area()
     {
-
+        double a = Math.PI*Math.pow(r, 2);
+        return a;
     }
 
     public double Circumference()
     {
-
+        double c = 2*r*Math.PI;
+        return c;
     }
 }
