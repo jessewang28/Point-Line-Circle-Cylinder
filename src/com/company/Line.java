@@ -29,12 +29,14 @@ public class Line {
         double midx = 0.5*(end1.getX()-end2.getX());
         double midy = 0.5*(end1.getY()-end2.getY());
         p1 = new Point(midx, midy);
-        return null;
+        return p1;
     }
 
     public boolean sameLength(Line otherLine)
     {
+        double d1 = distance();
 
+        (return Math.abs(d1-d2) <= .001)
     }
 
     public double slope()
