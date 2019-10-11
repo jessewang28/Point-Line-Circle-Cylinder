@@ -26,8 +26,8 @@ public class Line {
     }
     public Point midpoint()
     {
-        double midx = 0.5*(end1.getX()-end2.getX());        //averages the x values of 2 lines
-        double midy = 0.5*(end1.getY()-end2.getY());        //averages the y values of 2 lines
+        double midx = 0.5*(end1.getX()+end2.getX());        //averages the x values of 2 lines
+        double midy = 0.5*(end1.getY()+end2.getY());        //averages the y values of 2 lines
         p1 = new Point(midx, midy);
         return p1;
     }
@@ -90,3 +90,15 @@ public class Line {
     }
 
 }
+
+/*
+Line with endpoints (-1.0, -3.0) and (2.0, 1.0)
+Slope = 1.3333333333333333
+Line with endpoints (0.0, 0.0) and (3.0, 4.0)
+Slope = 1.3333333333333333
+Parallel? true
+distance = 5.0
+Midpoint = (0.5, -1.0)
+distance = 5.0
+Same length? true
+ */
