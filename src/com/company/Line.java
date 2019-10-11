@@ -3,6 +3,9 @@ package com.company;
 public class Line {
     private Point end1;
     private Point end2;
+    public Point p1;
+    //private Point end4;
+    //private Point end5;
 
     public Line(double x1, double y1, double x2, double y2)
     {
@@ -18,14 +21,15 @@ public class Line {
 
     public double distance()     //You may find Math.pow(base, power) and Math.sqrt(num) useful
     {
-
+        double dist = Math.sqrt((Math.pow(end1.getX()-end2.getX(), 2) + Math.pow(end1.getY()-end2.getY(), 2) ));
+        return dist;
     }
     public Point midpoint()
     {
-        double midx = 0.5(end1.getX()-end1.getX());
-        double midy = 0.5(end2.getY()-end2.getY());
-        int r = Point(midx, midy);
-        return r;
+        double midx = 0.5*(end1.getX()-end2.getX());
+        double midy = 0.5*(end1.getY()-end2.getY());
+        p1 = new Point(midx, midy);
+        return null;
     }
 
     public boolean sameLength(Line otherLine)
@@ -72,14 +76,14 @@ public class Line {
         System.out.println("Parallel? " + l1.parallel(l2));
 
 
-        //double dist = l1.distance();
-        //Point p1 = l1.midpoint();
+        double dist = l1.distance();
+        Point p1 = l1.midpoint();
 
-        //System.out.println("distance = " + dist);
-        //System.out.println("Midpoint = " + p1);
+        System.out.println("distance = " + dist);
+        System.out.println("Midpoint = " + p1);
 
-        //System.out.println("distance = " + l2.distance());
-        //System.out.println("Same length? " + l1.sameLength(l2));
+        System.out.println("distance = " + l2.distance());
+        System.out.println("Same length? " + l1.sameLength(l2));
 
     }
 
