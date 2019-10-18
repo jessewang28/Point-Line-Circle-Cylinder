@@ -65,7 +65,6 @@ public class Line {
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         Line l1 = new Line(-1,-3, 2,1);
 
         double m = l1.slope();
