@@ -2,16 +2,16 @@ package com.company;
 
 public class Circle {
     private double r;
-    public Circle c1;
+    private Circle c1;
 
-    public Circle(double r)
+    public Circle()
     {
-        c1 = new Circle(r);
+        r = 1;
     }
 
-    public Circle()     //default constructor
+    public Circle(double radius)
     {
-        c1 = new Circle();
+        r = radius;
     }
 
     public double Area()

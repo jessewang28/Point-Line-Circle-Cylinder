@@ -4,15 +4,23 @@ public class Cylinder {
     private Circle c1;
     private double h;
 
-    public Cylinder(int r,double h)
+    public Cylinder(double r,double height)
     {
         c1 = new Circle(r);
-        double height = h;
+        h = height;
     }
 
-    public Cylinder()
+
+    public double Vol()
     {
-        c1 = new Circle();
-        double h = 1;
+        double v = c1.Area() * h;
+        return v;
     }
+
+    public double SA()
+    {
+        double SA = 4*(c1.Area());
+        return SA;
+    }
+
 }
