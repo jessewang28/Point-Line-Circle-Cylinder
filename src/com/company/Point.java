@@ -1,4 +1,6 @@
 package com.company;
+//Jesse Wang
+//3B AP Computer Science
 
 public class Point {
     private double xCoord;

@@ -19,7 +19,7 @@ public class Cylinder {
 
     public double SA()
     {
-        double SA = 4*(c1.Area());
+        double SA = (2*c1.Area()+c1.Circumference()*h);
         return SA;
     }
 
